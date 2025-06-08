@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Comments</title>
+</head>
+<body>
+  <h1>Leave a Comment</h1>
+  <form action="/comment" method="POST">
+    <input type="hidden" name="_csrf" value="{{.csrf}}">
+    <textarea name="comment"></textarea>
+    <button type="submit">Submit</button>
+  </form>
+  {{if .comment}}
+  <h2>Your Comment:</h2>
+  <p>{{.comment}}</p>
+  {{end}}
+</body>
+</html>
